@@ -15,10 +15,21 @@
 </head>
 <body>
     <h1>Iniciando estudos com DOM</h1>
+
     <p>Aqui vai o resultado</p>
+
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
-    <div>
+
+    <p class="test">paragrafo de teste</p>
+
+    <p class="test">paragrafo de teste</p>
+
+    <div name="msg">
         Clique em mim!
+    </div>
+
+    <div id="tt">
+        teste de seletor
     </div>
 
     <script>
@@ -27,6 +38,19 @@
         window.document.write('Está escrito assim: </br>' + p1.innerHTML)
         corpo.style.background = 'pink'
         p1.style.color = 'blue'
+
+        var div1 = window.document.getElementsByName('msg')[0]
+        div1.style.color = 'purple'
+        div1.innerText = 'Estou aguardando......'
+
+        var pg = window.document.getElementsByClassName('test')[0]
+        var pg2 = window.document.getElementsByClassName('test')[1]
+
+        pg.style.background = 'orange'
+        pg2.style.background = 'orange'
+
+        var div2 = window.document.querySelector('div#tt')
+        div2.innerText = "Deu certo!"
     </script>
 </body>
 </html>

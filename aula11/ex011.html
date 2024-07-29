@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>De Onde você é?</h1>
+    <input type="text" name="txt" id="txt"> Informe sua nacionalidade:
+    <input type="button" value="Mostrar" onclick="clicar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function clicar() {
+            var nac = window.document.getElementById('txt')
+            var nacionalidade = String(nac.value)
+            var resposta = window.document.getElementById('res')
+            resposta.innerHTML = `Você nasceu no ${nacionalidade} <br>`
+            if (nacionalidade == 'Brasil') {
+                resposta.innerHTML += 'Logo você é Brasileiro. <br>' 
+            } else {
+                resposta.innerHTML += 'Se não, você é estrangeiro.'
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #corpo {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main {
+            width: 70vw;
+            height: 70vh;
+            background-color: rgb(187, 187, 187);
+            border-radius: 10px;
+            box-shadow: 1px 1px 3px;
+            margin: auto;
+        }
+
+        #div1 {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+        }
+
+        p {
+            margin: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body id="corpo">
+    <h1>Hora do Dia</h1>
+    <main>
+        <p id="h_dia">Agora são 9 horas</p>
+        <div id="div1">
+
+        </div>
+    </main>
+    <p>CursoemVídeo</p>
+
+    <script>
+        var h = new Date()
+        var hora = h.getHours()
+        var horario = window.document.getElementById('h_dia')
+        var fundo = window.document.getElementById('corpo')
+        var imagem = window.document.getElementById('div1')
+
+        if(hora >= 4 & hora <= 12) {
+            horario.innerHTML = `Agora é de manhã, e são ${hora} Horas.`
+            fundo.style.background = 'blue'
+            imagem.src = 'manha.jpg'
+        } else if(hora > 12 & hora < 18) {
+            horario.innerHTML = `Agora é de tarde, e são ${hora} Horas.`
+            fundo.style.background = 'orange'
+            imagem.src = 'tarde.jpg'
+        } else {
+            horario.innerHTML = `Agora é de noite, e são ${hora} Horas.`
+            fundo.style.background = 'purple'
+            imagem.src = 'noite.jpg'
+        }
+    </script>
+</body>
+</html>

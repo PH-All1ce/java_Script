@@ -28,7 +28,10 @@
         #div1 {
             width: 250px;
             height: 250px;
+            border: 3px solid white;
             border-radius: 50%;
+            background-position: center center;
+            background-size: cover;
             margin: auto;
         }
 
@@ -60,18 +63,18 @@
         var fundo = window.document.getElementById('corpo')
         var imagem = window.document.getElementById('div1')
 
-        if(hora >= 4 & hora <= 12) {
+        if(hora >= 4 && hora <= 12) {
             horario.innerHTML = `Agora é de manhã, e são ${hora} Horas.`
             fundo.style.background = 'blue'
-            imagem.src = 'manha.jpg'
-        } else if(hora > 12 & hora < 18) {
+            div1.style.backgroundImage = 'url(manha.jpg)'
+        } else if(hora > 12 && hora < 18) {
             horario.innerHTML = `Agora é de tarde, e são ${hora} Horas.`
             fundo.style.background = 'orange'
-            imagem.src = 'tarde.jpg'
+            div1.style.backgroundImage = 'url(tarde.jpg)'
         } else {
             horario.innerHTML = `Agora é de noite, e são ${hora} Horas.`
             fundo.style.background = 'purple'
-            imagem.src = 'noite.jpg'
+            div1.style.backgroundImage = 'url(noite.jpg)'
         }
     </script>
 </body>

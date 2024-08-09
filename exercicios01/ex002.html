@@ -16,15 +16,39 @@
             width: 40vw;
             height: 40vh;
             margin: auto;
+            border: 1px solid black;
+            padding: 20px;
         }
 
         #div1 {
+            margin: auto;
+        }
+        
+        #div2 {
+            margin: auto;
+            border: 1px solid black;
+            width: 40vw;
+            height: 40vh;
+            padding: 20px;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 20%);
+            display: none;
+        }
+
+        #img {
+            border-radius: 50%;
+            background-color: black;
+            width: 100px;
+            height: 100px;
             margin: auto;
         }
 
         h1 {
             text-align: center;
             font-size: 1.4em;
+            margin: 20px;
         }
 
         #rodape {
@@ -40,16 +64,27 @@
             <p>Sexo</p>
             <input type="radio" name="opcao" id="mas" required> Masculino
             <input type="radio" name="opcao" id="fem" required> Feminino
-            <input type="submit" value="Verificar">
+            <input type="submit" value="Verificar" onclick="clicar()">
             <p>Preencha os dados acima para verificar os resultados!</p>
         </div>
-        <div>
+        <div id="div2">
+            <p>Você é determinado indivíduo</p>
+            <div id="img">
 
+            </div>
         </div>
     </main>
     <p id="rodape">Phzin</p>
 
     <script>
+        var idade = window.document.getElementById('idade')
+        var sexo = window.document.getElementById('mas') 
+        var sex = window.document.getElementById('fem')
+
+        function clicar() {
+            var divisao2 = window.document.getElementById('div2')
+            divisao2.style.display = 'block'
+        }
 
     </script>
 </body>

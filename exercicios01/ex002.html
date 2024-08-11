@@ -9,83 +9,60 @@
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
+        }
+
+        body {
             font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(98, 9, 223);
         }
 
         main {
-            width: 40vw;
-            height: 40vh;
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 500px;
             margin: auto;
-            border: 1px solid black;
-            padding: 20px;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.401);
         }
 
-        #div1 {
-            margin: auto;
-        }
-        
-        #div2 {
-            margin: auto;
-            border: 1px solid black;
-            width: 40vw;
-            height: 40vh;
-            padding: 20px;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, 20%);
-            display: none;
-        }
-
-        #img {
-            border-radius: 50%;
-            background-color: black;
-            width: 100px;
-            height: 100px;
-            margin: auto;
-        }
-
-        h1 {
-            text-align: center;
-            font-size: 1.4em;
-            margin: 20px;
-        }
-
-        #rodape {
+        header {
+            color: white;
             text-align: center;
         }
+
+        footer {
+            color: white;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
-    <h1>Verificador de idade</h1>
+    <header>
+        <h1>Verificador de idade</h1>
+    </header>
     <main>
         <div id="div1">
-            <input type="number" name="idade" id="idade" required> Informe a sua idade
-            <p>Sexo</p>
-            <input type="radio" name="opcao" id="mas" required> Masculino
-            <input type="radio" name="opcao" id="fem" required> Feminino
-            <input type="submit" value="Verificar" onclick="clicar()">
-            <p>Preencha os dados acima para verificar os resultados!</p>
+            <p>Ano de nascimento
+                <input type="number" name="txtano" id="txtano">
+            </p>
+            <p>Sexo
+                <input type="radio" name="radsex" id="masc" checked>
+                <label for="masc">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="fem">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
         </div>
-        <div id="div2">
-            <p>Você é determinado indivíduo</p>
-            <div id="img">
-
-            </div>
+        <div id="res">
+            Preencha os dados acima para verificar os resultados!
         </div>
     </main>
-    <p id="rodape">Phzin</p>
-
-    <script>
-        var idade = window.document.getElementById('idade')
-        var sexo = window.document.getElementById('mas') 
-        var sex = window.document.getElementById('fem')
-
-        function clicar() {
-            var divisao2 = window.document.getElementById('div2')
-            divisao2.style.display = 'block'
-        }
-
-    </script>
+    <footer>
+        <p id="rodape">Phzin</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

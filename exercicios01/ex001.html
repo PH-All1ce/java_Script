@@ -25,6 +25,12 @@
             margin: auto;
         }
 
+        main p {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+        }
+
         #div1 {
             width: 250px;
             height: 250px;
@@ -35,26 +41,30 @@
             margin: auto;
         }
 
-        h1 {
+        header {
             text-align: center;
             margin: 20px;
         }
 
-        p {
+        footer {
             margin: 20px;
             text-align: center;
         }
     </style>
 </head>
 <body id="corpo">
-    <h1>Hora do Dia</h1>
+    <header>
+        <h1>Hora do Dia</h1>
+    </header>
     <main>
         <p id="h_dia">Agora são 9 horas</p>
         <div id="div1">
 
         </div>
     </main>
-    <p>CursoemVídeo</p>
+    <footer>
+        <p>CursoemVídeo</p>
+    </footer>
 
     <script>
         var h = new Date()
@@ -65,15 +75,15 @@
 
         if(hora >= 4 && hora <= 12) {
             horario.innerHTML = `Agora é de manhã, e são ${hora} Horas.`
-            fundo.style.background = 'blue'
+            fundo.style.background = '#0c7ee9'
             div1.style.backgroundImage = 'url(manha.jpg)'
         } else if(hora > 12 && hora < 18) {
             horario.innerHTML = `Agora é de tarde, e são ${hora} Horas.`
-            fundo.style.background = 'orange'
+            fundo.style.background = '#ec7906'
             div1.style.backgroundImage = 'url(tarde.jpg)'
         } else {
             horario.innerHTML = `Agora é de noite, e são ${hora} Horas.`
-            fundo.style.background = 'purple'
+            fundo.style.background = '#7a0195'
             div1.style.backgroundImage = 'url(noite.jpg)'
         }
     </script>

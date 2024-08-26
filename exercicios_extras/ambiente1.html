@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <p>
+        Informe um número entre zero e dez:
+        <input type="number" name="" id="idnum">
+        <input type="submit" value="Submeter" onclick="Sub()">
+    </p>
+    <div id="res">
+
+    </div>
+
+    <script>
+       function Sub() {
+            var resposta = document.getElementById('res')
+            var validInput = false
+            var sub = document.getElementById('idnum')
+            var submeter = Number(sub.value)    
+
+            while(validInput == false) {
+                if (submeter >= 0 && submeter <= 10) {
+                    resposta.innerHTML = 'Resultado válido.'
+                    validInput = true
+                } else {
+                    resposta.innerHTML = 'Resultado inválido, informe outro valor.'
+                }
+                c++
+            }
+            }
+    </script>
+</body>
+</html>

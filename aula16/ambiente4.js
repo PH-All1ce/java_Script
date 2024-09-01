@@ -1,6 +1,6 @@
 function Fatorial(n) {
     let fat = 1
-    for (let c = n; n > 1; c--) {
+    for (let c = n; c > 1; c--) {
         fat *= c
     }
     return fat

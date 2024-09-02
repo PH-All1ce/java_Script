@@ -2,13 +2,24 @@ var lista = []
 function Adicionar() {
     var num  = document.getElementById('num');
     var number = Number(num.value);
-    lista[0] = number;
+    var tab = document.getElementById('seletor');
+    if (number <= 0 || number == '' || number > 100) {
+        alert('Informe um valor válido.')
+    } else {
+        lista.push(number);
+        num.value = ''
+        let item = document.createElement('option')
+        item.text = `O número ${number} foi adicionado.`
+        tab.appendChild(item)
+    }
 }
-Adicionar();
 
 function Finalizar() {
-    var ltamanho = lista.length
+    lista.sort()
+    var ltamanho = lista.length;
+    var tamanho = Number(ltamanho.value);
     var res = document.getElementById('res')
-    res.innerHTML = lista
-    res. innerHTML += `A lista possui ${ltamanho} elementos`
+    res.innerHTML += `${lista} <br>`
+    res. innerHTML += `A lista possui ${ltamanho} elementos. <br>`
+    res.innerHTML += `O maior item da lista é o número ${lista[tamanho]}`
 }
